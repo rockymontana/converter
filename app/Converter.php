@@ -2,7 +2,10 @@
 
 namespace App;
 
-use App\Factory;
+use App\ConverterFactory;
+use DOMDocument;
+use SimpleXMLElement;
+use Spatie\ArrayToXml\ArrayToXml;
 
 class Converter
 {
@@ -19,15 +22,15 @@ class Converter
    * Structure the incoming CSV file according to the desired output
    * to make it easy to convert it to the desired output format.
    *
-   * @return void
+   * @return array
    */
-  private function structureCSV()
+  private function structureCSV(): array
   {
     $result = [];
     $personCount = -1;
     $familyCount = -1;
     foreach ($this->content as $row) {
-      $model = Factory::build($row);
+      $model = ConverterFactory::build($row);
 
       if ($model->getType() == 'person') {
         $personCount++;
@@ -60,7 +63,10 @@ class Converter
    */
   public function toXML()
   {
-    return array_to_xml($this->structureCSV(), 'people');
+    $xml = new ArrayToXml($this->structureCSV(), 'people', true, 'UTF-8');
+    $dom = $xml->toDom();
+    $dom->formatOutput = true;
+    return $dom->saveXML();
   }
 
   public function toJson()

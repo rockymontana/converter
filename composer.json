@@ -11,14 +11,14 @@
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Jonas Erlandsson",
+            "email": "jonas_erlandsson@icloud.com"
         }
     ],
     "require": {
         "php": "^8.2.0",
         "laravel-zero/framework": "^11.0.2",
-        "mtownsend/collection-xml": "^1.8"
+        "spatie/array-to-xml": "^3.3"
     },
     "require-dev": {
         "laravel/pint": "^1.18.1",

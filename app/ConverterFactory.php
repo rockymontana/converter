@@ -7,7 +7,7 @@ use App\Models\Family;
 use App\Models\Person;
 use App\Models\Phone;
 
-class Factory
+class ConverterFactory
 {
   public static function build(string $line): ConverterInterface
   {
@@ -28,5 +28,7 @@ class Factory
     if ($chunk[0] == 'F') {
       return new Family(name: $chunk[1], born: $chunk[2]);
     }
+
+    throw new \Exception('The prefix did not match any known keys');
   }
 }

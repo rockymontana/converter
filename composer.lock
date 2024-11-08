@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd19ce809c21e1769b8dfdb60d3c0aba",
+    "content-hash": "14880e0960e98e0623ee8e9740623e02",
     "packages": [
         {
             "name": "brick/math",
@@ -2168,70 +2168,6 @@
                 }
             ],
             "time": "2024-09-21T08:32:55+00:00"
-        },
-        {
-            "name": "mtownsend/collection-xml",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mtownsend5512/collection-xml.git",
-                "reference": "2bf5e682d4b2700de5e4d90fea28119af3c81621"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mtownsend5512/collection-xml/zipball/2bf5e682d4b2700de5e4d90fea28119af3c81621",
-                "reference": "2bf5e682d4b2700de5e4d90fea28119af3c81621",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-                "php": "~7.0|~8.0|~8.1",
-                "spatie/array-to-xml": "^3.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4|^8.5|^10.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Mtownsend\\CollectionXml\\Providers\\CollectionXmlServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Mtownsend\\CollectionXml\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Townsend",
-                    "email": "mtownsend5512@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The missing XML support for Laravel's Collection class.",
-            "keywords": [
-                "collection",
-                "laravel",
-                "soap",
-                "toSoapXml",
-                "toXML",
-                "xml"
-            ],
-            "support": {
-                "issues": "https://github.com/mtownsend5512/collection-xml/issues",
-                "source": "https://github.com/mtownsend5512/collection-xml/tree/1.8.0"
-            },
-            "time": "2024-03-12T15:42:34+00:00"
         },
         {
             "name": "nesbot/carbon",

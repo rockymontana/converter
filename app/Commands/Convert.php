@@ -28,6 +28,6 @@ class Convert extends Command
     public function handle()
     {
         $converter = new Converter(path: $this->argument('file'));
-        print_r($converter->toXml());
+        $this->line($converter->toXml());
     }
 }
